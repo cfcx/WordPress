@@ -177,9 +177,9 @@ class WP_REST_Block_Navigation_Areas_Controller extends WP_REST_Controller {
 	public function update_item( $request ) {
 		$name = $request['area'];
 
-		$mapping          = get_option( 'fse_navigation_areas', array() );
+		$mapping          = get_option( 'wp_navigation_areas', array() );
 		$mapping[ $name ] = $request['navigation'];
-		update_option( 'fse_navigation_areas', $mapping );
+		update_option( 'wp_navigation_areas', $mapping );
 
 		$area = $this->get_navigation_area_object( $name );
 		$data = $this->prepare_item_for_response( $area, $request );
@@ -196,7 +196,7 @@ class WP_REST_Block_Navigation_Areas_Controller extends WP_REST_Controller {
 	 */
 	protected function get_navigation_area_object( $name ) {
 		$available_areas   = get_navigation_areas();
-		$mapping           = get_option( 'fse_navigation_areas', array() );
+		$mapping           = get_option( 'wp_navigation_areas', array() );
 		$area              = new stdClass();
 		$area->name        = $name;
 		$area->navigation  = ! empty( $mapping[ $name ] ) ? $mapping[ $name ] : null;
@@ -211,7 +211,7 @@ class WP_REST_Block_Navigation_Areas_Controller extends WP_REST_Controller {
 	 *
 	 * @param stdClass        $area    Post status data.
 	 * @param WP_REST_Request $request Full details about the request.
-	 * @return WP_REST_Response Post status data.
+	 * @return WP_REST_Response|WP_Error Response object on success, or WP_Error object on failure.
 	 */
 	public function prepare_item_for_response( $area, $request ) {
 		$areas      = get_navigation_areas();
@@ -246,9 +246,9 @@ class WP_REST_Block_Navigation_Areas_Controller extends WP_REST_Controller {
 		 * Allows modification of the navigation area data right before it is
 		 * returned.
 		 *
-		 * @param WP_REST_Response $response The response object.
-		 * @param object           $area     The original status object.
-		 * @param WP_REST_Request  $request  Request used to generate the response.
+		 * @param WP_REST_Response|WP_Error $response The response object, or WP_Error object on failure.
+		 * @param object                    $area     The original status object.
+		 * @param WP_REST_Request           $request  Request used to generate the response.
 		 */
 		return apply_filters( 'rest_prepare_navigation_area', $response, $area, $request );
 	}
