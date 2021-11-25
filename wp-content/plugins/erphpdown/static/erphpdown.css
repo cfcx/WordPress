@@ -66,6 +66,47 @@
 .erphpdown-table .erphp-justbuy a.pmt-qq{background: #05B0FF}
 .erphpdown-table .erphp-justbuy a.pmt-stripe{background: #635bff}
 
+/** 下载页面样式定义 */
+#erphpdown-download{
+	margin:30px auto 0;
+	font-family:'Microsoft Yahei','Sans-serif';
+	font-size:15px;
+	color:#868686;
+	width:800px;
+	text-indent:2em;
+	min-height:240px;
+	/*border:1px solid #aabbcc;*/
+	border-radius:3px;
+	padding:0px 0px 8px;
+}
+#erphpdown-download img {
+	width:100%;
+	border-radius: 20px;
+}
+#erphpdown-download .title {
+	clear:both;
+	text-indent:0px;
+	font-size:18px;
+	color:#666;
+	font-weight:bold;
+	background-color:#EFEFEF;
+	border-bottom:0px solid #12b4f0;
+	padding:8px 12px;
+	border-left:8px solid #24b4f0;
+	margin:18px 0px;
+	border-radius: 6px;
+}
+#erphpdown-download .title span {
+	position:relative;
+}
+#erphpdown-download .title span:before {
+	top:9px;
+	left:-105px;
+}
+#erphpdown-download .title span:after {
+	top:9px;
+	right:-105px;
+}
 .erphpdown-body{position: relative;margin:0;padding:0;text-align: center;}
 #erphpdown-download{font-family:'Microsoft Yahei','Sans-serif';font-size:14px;min-height:180px;padding:30px 10px;text-align: center;position: relative;display: inline-block;}
 #erphpdown-download h1{font-size:18px;margin:0 0 20px;}
