@@ -16,3 +16,52 @@
  ***
  ***
  ***/
+ .post_hide_box, .secret-password{
+background: none repeat scroll 0 0 #fcffff;
+border: 1px dashed #24b4f0;
+color: #123456;
+padding: 10px;
+border-radius: 9px;
+margin: 18px 0px;
+overflow:hidden;
+clear:both;
+}
+.post_hide_box .post-secret{
+font-size: 18px;
+line-height:20px; 
+color:#f0503c; 
+margin:5px;
+}
+.post_hide_box form{ margin:15px 5px;}
+.post_hide_box form span{ font-size:18px; font-weight:bold;}
+.post_hide_box .erweima{ margin: 15px;}
+.post_hide_box input[type=password]{
+color: #00a0f0;
+padding: 5px;
+background-color: #fff;
+border: 1px solid #24b4f0;
+border-radius: 5px;
+font-size: 12px;
+margin: 6px 7px 6px 0px;
+-moz-transition: border .25s linear,color .25s linear,background-color .25s linear; 
+-webkit-transition: border .25s linear,color .25s linear,background-color .25s linear; -o-transition: border .25s linear,color .25s linear,background-color .25s linear; 
+transition: border .25s linear,color .25s linear,background-color .25s linear;
+}
+.post_hide_box input[type=submit] { 
+background: #24b4f0; 
+border: none; 
+padding: 5px;
+width: 88px; 
+color: #fff; 
+border-radius: 5px; 
+font-size: 16px;
+font-weight:bold;
+}
+.details{
+color:#123456;
+font-size: 16px;
+line-height: 30px;
+margin: 5px;
+padding: 3px;
+}
+.post_hide_box .details span{color:#e74c3c;}
